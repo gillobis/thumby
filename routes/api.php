@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('thumbnails', [ThumbnailController::class, 'store']);
-Route::get('thumbnails/{id}', [ThumbnailController::class, 'show']);
+Route::get('thumbnails/{thumbnail:id}', [ThumbnailController::class, 'show']);
