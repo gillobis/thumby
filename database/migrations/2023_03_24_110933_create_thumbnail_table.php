@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('thumbnail', function (Blueprint $table) {
-            $table->uuid()->primary();
+        Schema::create('thumbnails', function (Blueprint $table) {
+            $table->uuid('id')->primary();
             $table->string('filename');
             $table->timestamps();
         });
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('thumbnail');
+        Schema::dropIfExists('thumbnails');
     }
 };

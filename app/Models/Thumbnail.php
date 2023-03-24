@@ -10,4 +10,6 @@ class Thumbnail extends Model
 {
     use HasFactory;
     use HasUuids;
+
+    protected $fillable = ['filename'];
 }
